@@ -10,7 +10,7 @@ def scraper
       company: list.css('div.media-object-text').text,
       location: list.css('span.ts-quiet').text,
       warning: list.css('span.tag').text,
-      url: list.css('div.media-object-text').text.downcase
+      url: "https://www.tokyodev.com/companies/#{list.css('div.media-object-text').text.downcase}"
     }
     @jobs << job unless job[:title] == ""
   end
