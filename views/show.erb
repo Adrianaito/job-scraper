@@ -11,8 +11,8 @@
   <% end %>
 <% end %>
 <h1><%= @jobs.count %> jobs found!</h1>
-<a class="btn btn-primary" href="/no_japanese">Japanese not Required(<%= jobs.count %>)</a>
-<a class="btn btn-primary" href="/resident">Resident(<%= jobs_residents.count %>)</a>
+<a class="btn btn-primary" href="/no_japanese">Japanese not Required (<%= jobs.count %>)</a>
+<a class="btn btn-primary" href="/resident">Japan Residents Only (<%= jobs_residents.count %>)</a>
 <% @jobs.each do |job| %>
   <h1><%= job[:title] %></h1>
   <p><%= job[:company] %></p>

@@ -12,6 +12,6 @@ def scraper
       warning: list.css('span.tag').text,
       url: "https://www.tokyodev.com/companies/#{list.css('div.media-object-text').text.downcase}"
     }
-    @jobs << job unless job[:title] == ""
+    @jobs << job unless job[:title] == ''
   end
 end
