@@ -1,4 +1,4 @@
-<a href="/">Back</a>
+<a class="btn btn-primary" href="/">Back</a>
 <% jobs = [] %>
 <% @jobs.each do |job| %>
   <% unless job[:warning].downcase == "japanese required" %>
@@ -8,9 +8,9 @@
       <p><%= job[:company] %></p>
       <p><%= job[:location] %></p>
       <h5><%= job[:warning] %></h5>
-      <a href=<%= job[:url]%>>
+      <a class="btn btn-primary" href=<%= job[:url]%>>
         Read more </a>
     <% end %>
   <% end %>
 <% end %>
-<%= jobs.count %>
+<p><%= jobs.count %></p>

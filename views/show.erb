@@ -4,13 +4,13 @@
     <% jobs << job %>
   <% end %>
 <% end %>
-<a href="/tag">Japanese not Required(<%= jobs.count %>)</a>
+<a class="btn btn-primary" href="/tag">Japanese not Required(<%= jobs.count %>)</a>
 <p><%= @jobs.count %> jobs found!</p>
 <% @jobs.each do |job| %>
   <h1><%= job[:title] %></h1>
   <p><%= job[:company] %></p>
   <p><%= job[:location] %></p>
   <h5><%= job[:warning] %></h5>
-  <a href=<%= job[:url] %>>
+  <a class="btn btn-primary" href=<%= job[:url] %>>
     Read more </a>
 <% end %>
