@@ -4,8 +4,15 @@
     <% jobs << job %>
   <% end %>
 <% end %>
-<a class="btn btn-primary" href="/tag">Japanese not Required(<%= jobs.count %>)</a>
-<p><%= @jobs.count %> jobs found!</p>
+<% jobs_residents = [] %>
+<% @jobs.each do |job| %>
+  <% if job[:warning].downcase == "japan residents only" %>
+    <% jobs_residents << job %>
+  <% end %>
+<% end %>
+<h1><%= @jobs.count %> jobs found!</h1>
+<a class="btn btn-primary" href="/no_japanese">Japanese not Required(<%= jobs.count %>)</a>
+<a class="btn btn-primary" href="/resident">Resident(<%= jobs_residents.count %>)</a>
 <% @jobs.each do |job| %>
   <h1><%= job[:title] %></h1>
   <p><%= job[:company] %></p>

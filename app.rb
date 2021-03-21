@@ -8,8 +8,11 @@ get '/' do
   scraper
   erb :show
 end
-
-get '/tag' do
+get '/no_japanese' do
   scraper
-  erb :tag
+  erb :no_japanese
+end
+get '/resident' do
+  scraper
+  erb :resident
 end
