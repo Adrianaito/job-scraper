@@ -18,7 +18,7 @@ get '/' do
         warning: list.css('span.tag').text,
         url: list.css('div.media-object-text').text.downcase
       }
-      @jobs << job
+      @jobs << job unless job[:title] == ""
     end
   end
   scraper
