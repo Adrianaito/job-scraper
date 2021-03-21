@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <%= @jobs.count %> jobs found!
+    <% @jobs.each do |job| %>
+      <h1><%= job[:title] %></h1>
+      <p><%= job[:company] %></p>
+      <p><%= job[:location] %></p>
+      <h5><%= job[:warning] %></h5>
+      <a href=<%= "https://www.tokyodev.com/companies/#{job[:url]}" %>>
+        Read more </a>
+    <% end %>
+  </body>
+</html>
